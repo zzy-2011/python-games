@@ -9,7 +9,7 @@ python <游戏目录>/main.py
 ```
 例如：`python snake/main.py`
 
-## 已收录
+## 已收录（共 21 个）
 - guess 猜数字
 - rps 石头剪刀布
 - quiz 知识问答
@@ -18,5 +18,24 @@ python <游戏目录>/main.py
 - sudoku 数独
 - breakout 打砖块
 - pong 弹球
-
-（其余游戏持续补充中）
+- minesweeper 扫雷
+- tic-tac-toe 井字棋
+- gomoku 五子棋
+- reversi 黑白棋
+- sokoban 推箱子
+- memory 记忆翻牌
+- match3 消消乐
+- lianliankan 连连看
+- klotski 华容道
+- tank 坦克大战
+- bubble 泡泡龙
+- fruit 接水果
+- jump 跳一跳
+- balance 平衡球
+- runner2 跑酷
+- puzzle 数字拼图
+- slot 老虎机
+- dino 小恐龙
+- 2048
+- plane 飞机大战
+- tetris 俄罗斯方块

@@ -1,7 +1,8 @@
 import pygame, sys, random
 pygame.init()
+import os as _os; _FN=r"C:\Windows\Fonts\msyh.ttc" if _os.path.exists(r"C:\Windows\Fonts\msyh.ttc") else None
 W,H=480,300; screen=pygame.display.set_mode((W,H)); pygame.display.set_caption("跳一跳")
-clock=pygame.time.Clock(); font=pygame.font.SysFont(None,26)
+clock=pygame.time.Clock(); font=pygame.font.Font(_FN,26)
 plat=[(60,200,80),(200,200,80),(340,200,80)]
 bx=100; by=plat[0][1]-12; vy=0; on=0; score=0
 def draw():

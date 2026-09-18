@@ -1,8 +1,9 @@
 import pygame, sys, random
 pygame.init()
+import os as _os; _FN=r"C:\Windows\Fonts\msyh.ttc" if _os.path.exists(r"C:\Windows\Fonts\msyh.ttc") else None
 W,H=420,320
 screen=pygame.display.set_mode((W,H)); pygame.display.set_caption("石头剪刀布")
-font=pygame.font.SysFont(None,30)
+font=pygame.font.Font(_FN,30)
 opts=["石头","剪刀","布"]; you=0; cpu=0; dr=0; msg="按 1/2/3 出拳"
 def draw():
     screen.fill((20,22,40))

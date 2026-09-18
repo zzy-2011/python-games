@@ -1,8 +1,9 @@
 import pygame, sys, random
 pygame.init()
+import os as _os; _FN=r"C:\Windows\Fonts\msyh.ttc" if _os.path.exists(r"C:\Windows\Fonts\msyh.ttc") else None
 N=3; CELL=120; W=N*CELL; H=N*CELL+40
 screen=pygame.display.set_mode((W,H)); pygame.display.set_caption("井字棋")
-font=pygame.font.SysFont(None,60)
+font=pygame.font.Font(_FN,60)
 b=[[0]*3 for _ in range(3)]; turn=1; msg=""
 def draw():
     screen.fill((230,230,240))

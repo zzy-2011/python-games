@@ -1,8 +1,9 @@
 import pygame, sys, random
 pygame.init()
+import os as _os; _FN=r"C:\Windows\Fonts\msyh.ttc" if _os.path.exists(r"C:\Windows\Fonts\msyh.ttc") else None
 W,H=400,300
 screen=pygame.display.set_mode((W,H)); pygame.display.set_caption("猜数字")
-font=pygame.font.SysFont(None,30)
+font=pygame.font.Font(_FN,30)
 target=random.randint(1,100); guess=""; msg="我想了一个 1-100 的数，猜猜看"
 def draw():
     screen.fill((20,22,40))

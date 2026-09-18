@@ -1,7 +1,8 @@
 import pygame, sys, random
 pygame.init()
+import os as _os; _FN=r"C:\Windows\Fonts\msyh.ttc" if _os.path.exists(r"C:\Windows\Fonts\msyh.ttc") else None
 W,H=400,460; screen=pygame.display.set_mode((W,H)); pygame.display.set_caption("接水果")
-clock=pygame.time.Clock(); font=pygame.font.SysFont(None,26)
+clock=pygame.time.Clock(); font=pygame.font.Font(_FN,26)
 bx=W//2; fruits=[]; score=0
 def draw():
     screen.fill((20,30,20))

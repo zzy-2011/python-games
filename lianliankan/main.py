@@ -1,9 +1,10 @@
 import pygame, sys, random
 from collections import deque
 pygame.init()
-COLS,ROWS=10; CELL=40; W=COLS*CELL; H=ROWS*CELL+30
+import os as _os; _FN=r"C:\Windows\Fonts\msyh.ttc" if _os.path.exists(r"C:\Windows\Fonts\msyh.ttc") else None
+COLS=ROWS=10; CELL=40; W=COLS*CELL; H=ROWS*CELL+30
 screen=pygame.display.set_mode((W,H)); pygame.display.set_caption("连连看")
-font=pygame.font.SysFont(None,26)
+font=pygame.font.Font(_FN,26)
 g=[[0]*(COLS+2) for _ in range(ROWS+2)]
 syms=[]
 for i in range(COLS*ROWS//2): syms+=[i+1,i+1]

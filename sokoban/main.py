@@ -1,10 +1,11 @@
 import pygame, sys
 pygame.init()
+import os as _os; _FN=r"C:\Windows\Fonts\msyh.ttc" if _os.path.exists(r"C:\Windows\Fonts\msyh.ttc") else None
 lvl=["########","#      #","# .$@. #","#      #","#  $   #","#  .   #","########"]
 ROWS=len(lvl); COLS=max(len(x) for x in lvl)
 CELL=40; W=COLS*CELL; H=ROWS*CELL+30
 screen=pygame.display.set_mode((W,H)); pygame.display.set_caption("推箱子")
-font=pygame.font.SysFont(None,24)
+font=pygame.font.Font(_FN,24)
 grid=[list(row.ljust(COLS,'#')) for row in lvl]
 player=None
 for r in range(ROWS):

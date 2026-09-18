@@ -1,8 +1,9 @@
 import pygame, sys
 pygame.init()
+import os as _os; _FN=r"C:\Windows\Fonts\msyh.ttc" if _os.path.exists(r"C:\Windows\Fonts\msyh.ttc") else None
 N=15; CELL=32; W=N*CELL; H=N*CELL+30
 screen=pygame.display.set_mode((W,H)); pygame.display.set_caption("五子棋")
-font=pygame.font.SysFont(None,24)
+font=pygame.font.Font(_FN,24)
 b=[[0]*N for _ in range(N)]; turn=1; msg=""
 def draw():
     screen.fill((210,170,110))

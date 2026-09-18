@@ -1,7 +1,8 @@
 import pygame, sys, random
 pygame.init()
+import os as _os; _FN=r"C:\Windows\Fonts\msyh.ttc" if _os.path.exists(r"C:\Windows\Fonts\msyh.ttc") else None
 W,H=400,500; screen=pygame.display.set_mode((W,H)); pygame.display.set_caption("飞机大战")
-clock=pygame.time.Clock(); font=pygame.font.SysFont(None,26)
+clock=pygame.time.Clock(); font=pygame.font.Font(_FN,26)
 px,py=W//2,H-60; bullets=[]; foes=[]; score=0
 def draw():
     screen.fill((10,12,30))

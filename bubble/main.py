@@ -1,8 +1,9 @@
 import pygame, sys, random, math
 pygame.init()
-COLS,ROWS=11; CELL=36; W=COLS*CELL; H=ROWS*CELL+120
+import os as _os; _FN=r"C:\Windows\Fonts\msyh.ttc" if _os.path.exists(r"C:\Windows\Fonts\msyh.ttc") else None
+COLS=ROWS=11; CELL=36; W=COLS*CELL; H=ROWS*CELL+120
 screen=pygame.display.set_mode((W,H)); pygame.display.set_caption("泡泡龙")
-clock=pygame.time.Clock(); font=pygame.font.SysFont(None,24)
+clock=pygame.time.Clock(); font=pygame.font.Font(_FN,24)
 cols=[(230,80,80),(80,200,120),(80,150,230),(240,210,80)]
 g=[[random.randint(0,3) if r<ROWS-3 else 0 for c in range(COLS)] for r in range(ROWS)]
 bx=W//2; by=H-60; ang=math.pi/2; curc=random.randint(0,3); shot=None; score=0

@@ -1,8 +1,9 @@
 import pygame, sys, random
 pygame.init()
+import os as _os; _FN=r"C:\Windows\Fonts\msyh.ttc" if _os.path.exists(r"C:\Windows\Fonts\msyh.ttc") else None
 N=4; CELL=90; PAD=10; W=N*CELL+PAD*(N+1); H=W+40
 screen=pygame.display.set_mode((W,H)); pygame.display.set_caption("2048")
-font=pygame.font.SysFont(None,40)
+font=pygame.font.Font(_FN,40)
 board=[[0]*N for _ in range(N)]
 def spawn():
     empty=[(r,c) for r in range(N) for c in range(N) if board[r][c]==0]

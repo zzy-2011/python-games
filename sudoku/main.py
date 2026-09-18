@@ -1,8 +1,9 @@
 import pygame, sys, random
 pygame.init()
+import os as _os; _FN=r"C:\Windows\Fonts\msyh.ttc" if _os.path.exists(r"C:\Windows\Fonts\msyh.ttc") else None
 N=9; CELL=40; W=N*CELL; H=N*CELL+40
 screen=pygame.display.set_mode((W,H)); pygame.display.set_caption("数独")
-font=pygame.font.SysFont(None,30)
+font=pygame.font.Font(_FN,30)
 def ok(b,r,c,v):
     for i in range(N):
         if b[r][i]==v or b[i][c]==v: return False

@@ -1,8 +1,9 @@
 import pygame, sys, random
 pygame.init()
+import os as _os; _FN=r"C:\Windows\Fonts\msyh.ttc" if _os.path.exists(r"C:\Windows\Fonts\msyh.ttc") else None
 COLS,ROWS=10,20; CELL=24; W=COLS*CELL; H=ROWS*CELL+30
 screen=pygame.display.set_mode((W,H)); pygame.display.set_caption("俄罗斯方块")
-font=pygame.font.SysFont(None,24)
+font=pygame.font.Font(_FN,24)
 SHAPES=[[[1,1,1,1]],[[1,1],[1,1]],[[1,1,1],[0,1,0]],[[1,1,1],[1,0,0]],[[1,1,1],[0,0,1]],[[0,1,1],[1,1,0]],[[1,1,0],[0,1,1]]]
 board=[[0]*COLS for _ in range(ROWS)]
 cur=None; cx=0; cy=0; score=0

@@ -1,8 +1,9 @@
 import pygame, sys, random
 pygame.init()
-COLS,ROWS=9; CELL=40; W=COLS*CELL; H=ROWS*CELL+30
+import os as _os; _FN=r"C:\Windows\Fonts\msyh.ttc" if _os.path.exists(r"C:\Windows\Fonts\msyh.ttc") else None
+COLS=ROWS=9; CELL=40; W=COLS*CELL; H=ROWS*CELL+30
 screen=pygame.display.set_mode((W,H)); pygame.display.set_caption("扫雷")
-font=pygame.font.SysFont(None,28)
+font=pygame.font.Font(_FN,28)
 grid=[[{'m':False,'r':False,'f':False,'n':0} for _ in range(COLS)] for _ in range(ROWS)]
 mines=set()
 while len(mines)<10: mines.add((random.randint(0,ROWS-1),random.randint(0,COLS-1)))

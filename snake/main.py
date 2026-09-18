@@ -1,8 +1,9 @@
 import pygame, sys, random
 pygame.init()
+import os as _os; _FN=r"C:\Windows\Fonts\msyh.ttc" if _os.path.exists(r"C:\Windows\Fonts\msyh.ttc") else None
 CELL=20; COLS=20; ROWS=20; W=COLS*CELL; H=ROWS*CELL
 screen=pygame.display.set_mode((W,H)); pygame.display.set_caption("贪吃蛇")
-font=pygame.font.SysFont(None,28)
+font=pygame.font.Font(_FN,28)
 snake=[(COLS//2,ROWS//2)]; dx,dy=1,0
 food=(random.randint(0,COLS-1),random.randint(0,ROWS-1)); score=0; clock=pygame.time.Clock()
 def draw():

@@ -1,8 +1,9 @@
 import pygame, sys, random
 pygame.init()
+import os as _os; _FN=r"C:\Windows\Fonts\msyh.ttc" if _os.path.exists(r"C:\Windows\Fonts\msyh.ttc") else None
 N=3; CELL=100; W=N*CELL; H=N*CELL+30
 screen=pygame.display.set_mode((W,H)); pygame.display.set_caption("数字拼图")
-font=pygame.font.SysFont(None,50); font2=pygame.font.SysFont(None,24)
+font=pygame.font.Font(_FN,50); font2=pygame.font.Font(_FN,24)
 tiles=list(range(1,9))+[0]; random.shuffle(tiles)
 grid=[tiles[r*N:(r+1)*N] for r in range(N)]
 def draw():

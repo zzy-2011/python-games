@@ -1,8 +1,9 @@
 import pygame, sys, random, time
 pygame.init()
+import os as _os; _FN=r"C:\Windows\Fonts\msyh.ttc" if _os.path.exists(r"C:\Windows\Fonts\msyh.ttc") else None
 W,H=480,260
 screen=pygame.display.set_mode((W,H)); pygame.display.set_caption("打字练习")
-font=pygame.font.SysFont(None,34)
+font=pygame.font.Font(_FN,34)
 WORDS=["python","game","happy","world","code","play","speed","typing","keyboard","fun"]
 target=random.choice(WORDS); typed=""; start=time.time(); msg="照着打下面的词"
 def draw():

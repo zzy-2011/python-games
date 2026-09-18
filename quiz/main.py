@@ -1,8 +1,9 @@
 import pygame, sys, random
 pygame.init()
+import os as _os; _FN=r"C:\Windows\Fonts\msyh.ttc" if _os.path.exists(r"C:\Windows\Fonts\msyh.ttc") else None
 W,H=460,340
 screen=pygame.display.set_mode((W,H)); pygame.display.set_caption("知识问答")
-font=pygame.font.SysFont(None,26)
+font=pygame.font.Font(_FN,26)
 QA=[("中国首都是？",["上海","北京","广州"],1),("1+1=",["1","2","3"],1),
     ("水的化学式？",["H2O","CO2","O2"],0),("一年有几个月？",["10","12","11"],1),
     ("太阳从哪边升起？",["东","西","南"],0)]

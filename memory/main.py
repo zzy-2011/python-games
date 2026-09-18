@@ -1,8 +1,9 @@
 import pygame, sys, random
 pygame.init()
-COLS,ROWS=4; CELL=80; W=COLS*CELL; H=ROWS*CELL+30
+import os as _os; _FN=r"C:\Windows\Fonts\msyh.ttc" if _os.path.exists(r"C:\Windows\Fonts\msyh.ttc") else None
+COLS=ROWS=4; CELL=80; W=COLS*CELL; H=ROWS*CELL+30
 screen=pygame.display.set_mode((W,H)); pygame.display.set_caption("记忆翻牌")
-font=pygame.font.SysFont(None,40)
+font=pygame.font.Font(_FN,40)
 syms=list("AABBCCDDEEFFGGHH"); random.shuffle(syms)
 cards=[[syms[r*COLS+c] for c in range(COLS)] for r in range(ROWS)]
 flipped=[[False]*COLS for _ in range(ROWS)]; open1=None; open2=None; pairs=0; lock=0

@@ -1,10 +1,11 @@
 import pygame, sys, random
 pygame.init()
+import os as _os; _FN=r"C:\Windows\Fonts\msyh.ttc" if _os.path.exists(r"C:\Windows\Fonts\msyh.ttc") else None
 W,H=400,460; screen=pygame.display.set_mode((W,H)); pygame.display.set_caption("弹球")
 clock=pygame.time.Clock()
 p1=pygame.Rect(15,H//2-30,10,60); p2=pygame.Rect(W-25,H//2-30,10,60)
 ball=pygame.Rect(W//2,H//2,10,10); bvx,bvy=4,4; s1=s2=0
-font=pygame.font.SysFont(None,26)
+font=pygame.font.Font(_FN,26)
 def draw():
     screen.fill((20,22,40))
     pygame.draw.rect(screen,(255,255,255),p1); pygame.draw.rect(screen,(255,255,255),p2)

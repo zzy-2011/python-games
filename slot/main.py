@@ -1,7 +1,8 @@
 import pygame, sys, random
 pygame.init()
+import os as _os; _FN=r"C:\Windows\Fonts\msyh.ttc" if _os.path.exists(r"C:\Windows\Fonts\msyh.ttc") else None
 W,H=360,260; screen=pygame.display.set_mode((W,H)); pygame.display.set_caption("老虎机")
-font=pygame.font.SysFont(None,40); font2=pygame.font.SysFont(None,28)
+font=pygame.font.Font(_FN,40); font2=pygame.font.Font(_FN,28)
 syms=["7","CHERRY","LEMON","BELL","STAR"]
 reels=[0,0,0]; coins=100; msg="空格 拉霸"
 def draw():

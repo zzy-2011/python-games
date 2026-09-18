@@ -1,8 +1,9 @@
 import pygame, sys, random
 pygame.init()
+import os as _os; _FN=r"C:\Windows\Fonts\msyh.ttc" if _os.path.exists(r"C:\Windows\Fonts\msyh.ttc") else None
 N=8; CELL=50; W=N*CELL; H=N*CELL+30
 screen=pygame.display.set_mode((W,H)); pygame.display.set_caption("消消乐")
-font=pygame.font.SysFont(None,30)
+font=pygame.font.Font(_FN,30)
 cols=[(230,80,80),(80,200,120),(80,150,230),(240,210,80),(200,120,220),(90,210,210)]
 g=[[random.randint(0,5) for _ in range(N)] for _ in range(N)]
 sel=None; score=0

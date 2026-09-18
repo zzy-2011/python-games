@@ -1,7 +1,8 @@
 import pygame, sys, random
 pygame.init()
+import os as _os; _FN=r"C:\Windows\Fonts\msyh.ttc" if _os.path.exists(r"C:\Windows\Fonts\msyh.ttc") else None
 W,H=480,300; screen=pygame.display.set_mode((W,H)); pygame.display.set_caption("小恐龙")
-clock=pygame.time.Clock(); font=pygame.font.SysFont(None,26)
+clock=pygame.time.Clock(); font=pygame.font.Font(_FN,26)
 px,py=60,H-60; vy=0; ground=H-60; obs=[]; score=0; spd=4
 def draw():
     screen.fill((240,240,245))

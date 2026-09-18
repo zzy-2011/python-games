@@ -1,8 +1,9 @@
 import pygame, sys
 pygame.init()
-COLS,ROWS=4; CELL=80; W=COLS*CELL; H=ROWS*CELL+30
+import os as _os; _FN=r"C:\Windows\Fonts\msyh.ttc" if _os.path.exists(r"C:\Windows\Fonts\msyh.ttc") else None
+COLS=ROWS=4; CELL=80; W=COLS*CELL; H=ROWS*CELL+30
 screen=pygame.display.set_mode((W,H)); pygame.display.set_caption("华容道")
-font=pygame.font.SysFont(None,24)
+font=pygame.font.Font(_FN,24)
 blocks=[(0,0,2,2,(200,120,80)),(0,2,1,2,(120,160,220)),(0,3,1,2,(120,160,220)),
         (2,0,2,1,(120,200,120)),(2,1,2,1,(120,200,120)),
         (2,3,1,1,(230,220,80)),(3,0,1,1,(230,220,80)),(3,1,1,1,(230,220,80)),(3,2,1,1,(230,220,80)),(3,3,1,1,(230,220,80))]
